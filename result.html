@@ -207,21 +207,21 @@
                 document.body.style.overflow = 'auto';
             });
 
-            const testResults1 = {
-                testId: "english",
-                userAnswers: [0, 1, 0, 1, 2, 1, 1, 1, 1, 1]
-            };
+            // const testResults1 = {
+            //     testId: "english",
+            //     userAnswers: [0, 1, 0, 1, 2, 1, 1, 1, 1, 1]
+            // };
 
 
-            localStorage.setItem('testResults', JSON.stringify(testResults1));
+            // localStorage.setItem('testResults', JSON.stringify(testResults1));
 
 
-            const testResults = JSON.parse(localStorage.getItem('testResults'));
+            const testResults = JSON.parse(localStorage.getItem('user1'));
             if (!testResults) {  //ensure that there is result in local storage
                 alert('No test results found. Please complete the test first.');
                 window.location.href = 'index.html'; // redirect user to home page
             }
-            const testId = testResults.testId;
+            const testId = testResults.selectedTest;
             const userAnswers = testResults.userAnswers;
 
             fetch(`json/${testId}.json`)
