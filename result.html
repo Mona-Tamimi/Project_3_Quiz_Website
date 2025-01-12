@@ -197,12 +197,13 @@
             const section = document.getElementById("finish");
 
             section.style.animation = "fadeOut 1s ease";
-            // section.style.visibility = "hidden";
+            section.style.visibility = "hidden";
 
             section.addEventListener("animationend", () => {
 
-                section.style.marginTop = '3vw';
+                section.style.marginTop = '0vw';
                 document.getElementById("container").style.display = "block";
+                document.getElementById("container").style.marginTop = "-3vw"
                 document.getElementById("btn-seeResult").style.display = "none";
                 document.body.style.overflow = 'auto';
             });
@@ -233,7 +234,7 @@
                     const resultTitle = document.getElementById('result-title');
                     const scoreElement = document.getElementById('score');
 
-                    if (score >= 6) {
+                    if (score >= 5) {
                         resultTitle.textContent = 'Congratulations!';
                         document.body.style.backgroundColor = '#C2FAF1';
                         scoreElement.textContent = `You passed with a score of ${score} out of ${questions.length}.`;
