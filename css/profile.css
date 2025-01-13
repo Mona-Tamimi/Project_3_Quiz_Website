@@ -60,7 +60,14 @@ body {
 .profile-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-item2{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
     border-bottom: 1px solid #ddd;
 }
 
@@ -72,10 +79,23 @@ body {
 .profile-value {
     font-size: 1.1em;
     color: #555;
+    position: absolute;
+    left: 40vw;
 }
 
-.profile-image {
-    border-radius: 50%;
+#profile-image {
+    /* border-radius: 50%; */
+    position: absolute;
+    left: 40vw;
+    top: 14vw;
+}
+@media (max-width:500px) {
+    #profile-image {
+        /* border-radius: 50%; */
+        position: absolute;
+        left: 40vw;
+        top: 74vw;
+    }
 }
 
 .edit-profile-modal {

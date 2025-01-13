@@ -106,3 +106,7 @@ function downloadPDF() {
     // Save the PDF
     doc.save('test_results.pdf');
 }
+
+document.getElementById('btn-downloadResult').addEventListener('click', function () {
+    window.print(); 
+});

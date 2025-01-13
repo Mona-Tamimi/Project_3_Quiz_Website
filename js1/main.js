@@ -252,7 +252,7 @@
 })(jQuery);
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 	// الكود هنا بعد تحميل الـ DOM
 	const readMoreButtons = document.querySelectorAll('.read-more-btn');
 	const popup = document.getElementById('quiz-popup');
@@ -260,58 +260,104 @@ document.addEventListener('DOMContentLoaded', function() {
 	const popupText = document.getElementById('popup-text');
 	const closeBtn = document.querySelector('.close-btn');
 	const startQuizBtn = document.getElementById('start-quiz-btn');
-  
+	const confirmCheckbox = document.getElementById('confirm-instructions');
+	let selectedTest = "";
+
 	// إضافة الأحداث إلى الأزرار "Read more"
 	readMoreButtons.forEach(button => {
-	  button.addEventListener('click', () => {
-		const title = button.getAttribute('data-title');
-		let content = button.getAttribute('data-content');
-  
-		// استبدال \n بـ <br> لإنشاء فواصل الأسطر في النص
-		content = content.replace(/\n/g, '<br>');
-  
-		popupTitle.textContent = title;
-		popupText.innerHTML = content; // استخدام innerHTML للسماح بعرض الـ <br>
-		popup.style.display = 'flex';
-  
-		// تخزين نوع الامتحان في متغير global
-		if (title === 'English Quiz') {
-		  localStorage.setItem('selectedTest', 'English');
-		} else if (title === 'IQ Quiz') {
-		  localStorage.setItem('selectedTest', 'IQ');
-		} else if (title === 'Technical Quiz') {
-		  localStorage.setItem('selectedTest', 'Technical');
-		}
-	  });
+		button.addEventListener('click', () => {
+			const title = button.getAttribute('data-title');
+			let content = button.getAttribute('data-content');
+
+			// استبدال \n بـ <br> لإنشاء فواصل الأسطر في النص
+			content = content.replace(/\n/g, '<br>');
+
+			popupTitle.textContent = title;
+			popupText.innerHTML = content; // استخدام innerHTML للسماح بعرض الـ <br>
+			popup.style.display = 'flex';
+
+
+
+			// تخزين نوع الامتحان في متغير global
+			if (title === 'English Quiz') {
+				selectedTest=localStorage.setItem('selectedTest', 'English');
+			} else if (title === 'IQ Quiz') {
+				selectedTest=localStorage.setItem('selectedTest', 'IQ');
+			} else if (title === 'Technical Quiz') {
+				selectedTest=localStorage.setItem('selectedTest', 'Technical');
+			}
+
+			confirmCheckbox.checked = false; // إعادة ضبط خانة الاختيار
+			startQuizBtn.disabled = true; // تعطيل الزر عند فتح النافذة
+		});
 	});
-  
+
+	// Enable or disable the start button based on checkbox state
+	confirmCheckbox.addEventListener('change', () => {
+		startQuizBtn.disabled = !confirmCheckbox.checked;
+	});
+
+
 	// إغلاق الـ Popup
 	closeBtn.addEventListener('click', () => {
-	  popup.style.display = 'none';
+		popup.style.display = 'none';
 	});
-  
+
 	// إغلاق النافذة عند الضغط خارجها
 	window.addEventListener('click', (e) => {
-	  if (e.target === popup) {
-		popup.style.display = 'none';
-	  }
+		if (e.target === popup) {
+			popup.style.display = 'none';
+		}
 	});
-  
+
 	// حدث عند الضغط على زر "ابدأ الامتحان"
 	startQuizBtn.addEventListener('click', () => {
-	  const quizType = popupTitle.textContent; // الحصول على عنوان الامتحان من popupTitle
-  
-	  // عرض رسالة تنبيه حسب نوع الامتحان
-	  if (quizType === 'English Quiz') {
-		alert("English exam will start now!");
-		window.location.href = "test.html"; // استبدل بالصفحة المناسبة للامتحان الإنجليزي
-	  } else if (quizType === 'IQ Quiz') {
-		alert("IQ test starts now!");
-		window.location.href = 'test.html'; // استبدل بالصفحة المناسبة للامتحان IQ
-	  } else if (quizType === 'Technical Quiz') {
-		alert("Exam Technical starts now!");
-		window.location.href = 'test.html'; // استبدل بالصفحة المناسبة للامتحان التقني
-	  }
+		const quizType = popupTitle.textContent; // الحصول على عنوان الامتحان من popupTitle
+
+		// عرض رسالة تنبيه حسب نوع الامتحان
+		if (quizType === 'English Quiz') {
+			window.location.href = "test.html"; // استبدل بالصفحة المناسبة للامتحان الإنجليزي
+		} else if (quizType === 'IQ Quiz') {
+			window.location.href = 'test.html'; // استبدل بالصفحة المناسبة للامتحان IQ
+		} else if (quizType === 'Technical Quiz') {
+			window.location.href = 'test.html'; // استبدل بالصفحة المناسبة للامتحان التقني
+		}
 	});
-  });
-  
+});
+
+function iq() {
+	const testButton = document.getElementById('iq-btn');
+	const check1 = localStorage.getItem('selectedTest');
+	if (check1 === "IQ") {
+		window.alert('This Quiz Already Taken')
+		location.href= 'apply_test.html';
+
+	} else {
+		alert("IQ exam will start now!");
+		window.location.href = "test.html";
+	}
+  }
+function english() {
+	const testButton = document.getElementById('english-btn');
+	const check1 = localStorage.getItem('selectedTest');
+	if (check1 === "English") {
+		window.alert('This Quiz Already Taken')
+		location.href= 'apply_test.html';
+
+	} else {
+		alert("English exam will start now!");
+		window.location.href = "test.html";
+	}
+  }
+function tech() {
+	const testButton = document.getElementById('tech-btn');
+	const check1 = localStorage.getItem('selectedTest');
+	if (check1 === "Techical") {
+		window.alert('This Quiz Already Taken')
+		location.href= 'apply_test.html';
+
+	} else {
+		alert("Technical exam will start now!");
+		window.location.href = "test.html";
+	}
+  }

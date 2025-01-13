@@ -4,7 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -8385,7 +8385,7 @@ h1, h2, h3, h4, h5,
   z-index: 3; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #000000 !important;
+      background: #295E6A !important;
       position: relative;
       top: 0;
       padding-top: 0;
@@ -8574,6 +8574,7 @@ h1, h2, h3, h4, h5,
   line-height: 1.2;
   background: #4986fc;
   padding: 0 20px;
+  margin-bottom: 5px;
   background: #ce4be8;
   background: -moz-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
   background: -webkit-gradient(left top, right bottom, color-stop(0%, #ce4be8), color-stop(100%, #207ce5));
@@ -8634,6 +8635,7 @@ h1, h2, h3, h4, h5,
 .slider-text {
   position: relative; }
   .slider-text .subheading {
+    text-shadow: 2px 5px 8px #343434;
     font-size: 4vw;
     color: #295E6A;
     font-weight: 700;
@@ -9061,12 +9063,12 @@ textarea.form-control {
       .ftco-about .about-wrap {
         height: 400px; } }
   .ftco-about .img {
-    -webkit-box-shadow: 0px 2px 25px -13px rgba(0, 0, 0, 0.26);
+    /* -webkit-box-shadow: 0px 2px 25px -13px rgba(0, 0, 0, 0.26); */
     -moz-box-shadow: 0px 2px 25px -13px rgba(0, 0, 0, 0.26);
-    box-shadow: 0px 2px 25px -13px rgba(0, 0, 0, 0.26);
+    /* box-shadow: 0px 2px 25px -13px rgba(0, 0, 0, 0.26); */
     border: 15px solid #fff;
-    width: 70%;
-    height: 80%;
+    width: 90%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0; }
@@ -9529,7 +9531,7 @@ textarea.form-control {
       border-radius: 50%;
       background: rgba(0, 0, 0, 0.1); }
       .testimony-section .owl-dots .owl-dot.active, .testimony-section .owl-dots .owl-dot:focus {
-        background: #4986fc;
+        background: #295E6A;
         outline: none; }
 
 .testimony-wrap {
@@ -10244,10 +10246,10 @@ textarea.form-control {
 }
 
 .images-container {
-  margin-left: 20px; 
   display: flex;
   flex-wrap: wrap;
   row-gap: 50px;
+  margin: 20px 60px 20px 60px;
 }
 
 .images-container .box {

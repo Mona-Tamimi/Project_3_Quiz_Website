@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<title>NEXEL-Contact Us</title>
+    <link rel="shortcut icon" href="/images/logo2.png" type="image/x-icon">
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -22,29 +24,62 @@
 	<link rel="stylesheet" href="css3/flaticon.css">
 	<link rel="stylesheet" href="css3/style.css">
 </head>
-<script>
-    // دالة لتحميل المحتوى من ملف خارجي
-    function loadContent() {
-        // تحميل الهيدر
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
 
-        // تحميل الفوتر
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    }
-
-    // استدعاء الدالة عند تحميل الصفحة
-    window.onload = loadContent;
-</script>
 <body>
-	<div id="header"></div>
+	<!-- <div id="header"></div> -->
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+		  <center>
+			<a class="navbar-brand" href="index.html" style="padding-left: 13px;">
+			  <img src="icon.png" style="margin-top: -3px; margin-left:1px; position: absolute; width: 30px;">
+			  <span style="margin-left: 35px;">NEXEL</span>
+			</a>
+		  </center>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+			aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="oi oi-menu"></span> ☰
+		  </button>
+	
+		  <div class="collapse navbar-collapse" id="ftco-nav">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+			  <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+			  <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+			  <li class="nav-item"><a href="apply_test.html" class="nav-link" id="apply-btn">Apply Test</a></li>
+			  <!-- <li class="nav-item"><a href="register.html" class="nav-link" id="register-btn">Register</a></li> -->
+			  <!-- <li class="nav-item"><a href="login.html" class="nav-link" id="login-btn">Log In</a></li> -->
+			  <li class="nav-item"><a href="profile.html" class="nav-link" id="profile-btn">Profile</a></li>
+			  <li class="nav-item"><a href="index.html" class="nav-link" id="logout-btn">Log Out</a></li>
+	
+	
+	
+			  <!-- رابط التسجيل -->
+			  <li class="nav-item">
+				<a href="register.html" class="nav-link" id="register-btn">
+				  <i ></i> Register
+				</a>
+			  </li>
+			  <li class="nav-item" id="auth-item" id="login-btn">
+				<a href="login.html" class="nav-link" onclick="loginUser(event)">
+				  <i class="fas fa-sign-in-alt"></i> Log In
+				</a>
+			  </li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			</ul>
+		  </div>
+	
+	
+		  
+		</div>
+	  </nav>
 
 	<!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
@@ -180,16 +215,16 @@
 		</div>
 	</section>
 
-	<div id="footer"></div>
-
-
-	<!-- <footer class="ftco-footer ftco-no-pt">
+	<!-- <div id="footer"></div> -->
+	<footer class="ftco-footer ftco-no-pt">
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-md pt-5">
 					<div class="ftco-footer-widget pt-md-5 mb-4">
 						<h2 class="ftco-heading-2">About</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+							there live the
+							blind texts.</p>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
 							<li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
 							<li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -228,9 +263,13 @@
 						<h2 class="ftco-heading-2">Have a Questions?</h2>
 						<div class="block-23 mb-3">
 							<ul>
-								<li><span class="icon fa fa-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-								<li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@yourdomain.com</span></a></li>
+								<li><span class="icon fa fa-map-marker"></span><span class="text">203 Fake St. Mountain
+										View, San
+										Francisco, California, USA</span></li>
+								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929
+											210</span></a></li>
+								<li><a href="#"><span class="icon fa fa-paper-plane"></span><span
+											class="text">info@yourdomain.com</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -238,17 +277,22 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
-
+	
 					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-					</div>
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | This website
+						is made with
+						<i class="fa fa-heart" aria-hidden="true"></i> by <a href="about.html"
+							target="_blank">NEXEL Team</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
 				</div>
 			</div>
+		</div>
+	</footer>
 
-		</footer> -->
-		
-		
+
+
 
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -269,6 +313,15 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 		<script src="js3/google-map.js"></script>
 		<script src="js3/main.js"></script>
+		<script src="javascript/disable.js"></script>
+
+  <script>
+    document.getElementById('logout-btn').addEventListener("click", logoutFunction);
+
+function logoutFunction() {
+  localStorage.removeItem('user');
+}
+  </script>
 		
 	</body>
 	</html>
