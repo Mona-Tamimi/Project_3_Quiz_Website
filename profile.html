@@ -403,7 +403,7 @@
                 <input type="text" id="name" name="name" value="Mohammad Al-shorman" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" value="nexel@example.com" required>
+                <input type="email" id="email" name="email" value="nexel@example.com" disabled>
 
                 <label for="bio">Bio:</label>
                 <textarea id="bio" name="bio" rows="4"
@@ -527,7 +527,7 @@
         document.getElementById('logout-btn').addEventListener("click", logoutFunction);
 
         function logoutFunction() {
-            localStorage.removeItem('user');
+            localStorage.clear();
         }
     </script>
 
