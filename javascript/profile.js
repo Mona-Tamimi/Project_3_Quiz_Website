@@ -1,9 +1,6 @@
 const user = JSON.parse(localStorage.getItem('user'));
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 70165052437114aea33dadd2e597eaddf85e102e
 
 document.addEventListener('DOMContentLoaded', function () {
     const name = localStorage.getItem('name') || 'Mohammad Al-shorman';
