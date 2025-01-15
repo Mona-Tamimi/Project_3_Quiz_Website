@@ -280,11 +280,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			// تخزين نوع الامتحان في متغير global
 			if (title === 'English Quiz') {
-				selectedTest=localStorage.setItem('selectedTest', 'English');
+				selectedTest = localStorage.setItem('selectedTest', 'English');
 			} else if (title === 'IQ Quiz') {
-				selectedTest=localStorage.setItem('selectedTest', 'IQ');
+				selectedTest = localStorage.setItem('selectedTest', 'IQ');
 			} else if (title === 'Technical Quiz') {
-				selectedTest=localStorage.setItem('selectedTest', 'Technical');
+				selectedTest = localStorage.setItem('selectedTest', 'Technical');
 			}
 
 			confirmCheckbox.checked = false; // إعادة ضبط خانة الاختيار
@@ -330,34 +330,34 @@ function iq() {
 	const check1 = localStorage.getItem('selectedTest');
 	if (check1 === "IQ") {
 		window.alert('This Quiz Already Taken')
-		location.href= 'apply_test.html';
+		location.href = 'apply_test.html';
 
 	} else {
 		alert("IQ exam will start now!");
-		window.location.href = "test.html";
+
 	}
-  }
+}
 function english() {
 	const testButton = document.getElementById('english-btn');
 	const check1 = localStorage.getItem('selectedTest');
 	if (check1 === "English") {
 		window.alert('This Quiz Already Taken')
-		location.href= 'apply_test.html';
+		location.href = 'apply_test.html';
 
 	} else {
 		alert("English exam will start now!");
-		window.location.href = "test.html";
+
 	}
-  }
+}
 function tech() {
 	const testButton = document.getElementById('tech-btn');
 	const check1 = localStorage.getItem('selectedTest');
 	if (check1 === "Techical") {
 		window.alert('This Quiz Already Taken')
-		location.href= 'apply_test.html';
+		location.href = 'apply_test.html';
 
 	} else {
 		alert("Technical exam will start now!");
-		window.location.href = "test.html";
+
 	}
-  }
+}
