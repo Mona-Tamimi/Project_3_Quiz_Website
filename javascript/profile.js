@@ -1,10 +1,13 @@
 const user = JSON.parse(localStorage.getItem('user'));
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 70165052437114aea33dadd2e597eaddf85e102e
 
 document.addEventListener('DOMContentLoaded', function () {
     const name = localStorage.getItem('name') || 'Mohammad Al-shorman';
-    const email = localStorage.getItem('email') || 'ahmad@example.com';
+    const email = localStorage.getItem('email') || 'shorman@example.com';
     const bio = localStorage.getItem('bio') || 'Web Developer specializing in Frontend and Backend.';
     const gender = localStorage.getItem('gender') || 'Male';
     const age = localStorage.getItem('age') || '22';
