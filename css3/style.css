@@ -8391,8 +8391,8 @@ h1, h2, h3, h4, h5,
       padding-top: 0;
       padding-bottom: 0; } }
   .ftco-navbar-light .container {
-    width: 1110px;
-    margin: 0 auto;
+    width: 1400px;
+    margin: 0px 0px;
     padding: 0; }
   .ftco-navbar-light .navbar-brand {
     color: #fff;
@@ -8574,7 +8574,7 @@ h1, h2, h3, h4, h5,
   line-height: 1.2;
   background: #4986fc;
   padding: 0 20px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   background: #ce4be8;
   background: -moz-linear-gradient(-45deg, #ce4be8 0%, #207ce5 100%);
   background: -webkit-gradient(left top, right bottom, color-stop(0%, #ce4be8), color-stop(100%, #207ce5));
@@ -8630,7 +8630,7 @@ h1, h2, h3, h4, h5,
       background: linear-gradient(135deg, #295E6A 0%, #295E6A 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#295E6A', endColorstr='#295E6A', GradientType=1 ); }
     .hero-wrap.hero-wrap-2 .slider-text {
-      height: 600px; }
+      height: 450px; }
 
 .slider-text {
   position: relative; }
@@ -8641,7 +8641,7 @@ h1, h2, h3, h4, h5,
     font-weight: 700;
     text-transform: uppercase; }
   .slider-text h1 {
-    font-size: 50px;
+    font-size: 80px;
     color: #fff;
     line-height: 1.2;
     font-weight: 700; }
@@ -8840,8 +8840,8 @@ h1, h2, h3, h4, h5,
         color: #fff; }
 
 .course-category {
-  width: 160px;
-  height: 160px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
@@ -8861,7 +8861,7 @@ h1, h2, h3, h4, h5,
     border-radius: 50%; }
   .course-category .text h3 {
     color: #fff;
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 0; }
   .course-category .text span {
     font-size: 12px;
@@ -9458,7 +9458,7 @@ textarea.form-control {
   position: relative; }
   .testimony-section .container-2 {
     margin: 0 0 0 auto !important;
-    max-width: 1290px; }
+    max-width: 1600px; }
   .testimony-section .overlay {
     background-size: cover;
     background-repeat: no-repeat;
